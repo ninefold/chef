@@ -22,20 +22,6 @@ require 'chef/mixin/command'
 require 'chef/resource/package'
 require 'chef/mixin/get_source_from_package'
 
-# Class methods on Gem are defined in rubygems
-require 'rubygems'
-# Ruby 1.9's gem_prelude can interact poorly with loading the full rubygems
-# explicitly like this. Make sure rubygems/specification is always last in this
-# list
-require 'rubygems/version'
-require 'rubygems/dependency'
-require 'rubygems/spec_fetcher'
-require 'rubygems/platform'
-require 'rubygems/format'
-require 'rubygems/dependency_installer'
-require 'rubygems/uninstaller'
-require 'rubygems/specification'
-
 class Chef
   class Provider
     class Package
@@ -65,7 +51,7 @@ class Chef
             raise NotImplementedError
           end
 
-          ## 
+          ##
           # A rubygems specification object containing the list of gemspecs for all
           # available gems in the gem installation.
           # Implemented by subclasses
