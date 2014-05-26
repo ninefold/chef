@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rest-client", ">= 1.0.4", "< 1.7.0"
 
   # The JSON gem reliably releases breaking changes as a patch release
-  s.add_dependency "json", ">= 1.4.4", "<=  1.7.7"
+  s.add_dependency "json", ">= 1.8.1"
   s.add_dependency "yajl-ruby", "~> 1.1"
   s.add_dependency "net-ssh", "~> 2.6"
   s.add_dependency "net-ssh-multi", "~> 1.1.0"
